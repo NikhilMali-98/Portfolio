@@ -1,0 +1,274 @@
+// .main{
+//     display: grid;
+//     grid-template-columns: repeat(2,1f);  
+//     gap: 40px;
+//     margin-bottom: 30px;
+// }
+
+// .home{
+//     position: relative; 
+//     height: 100%;
+//     justify-content: center;
+//     align-content: center;
+//     flex-direction: column;
+
+//     &__text-wrapper{
+//         display: flex;
+//         justify-content: center;
+
+//         h1,h3{
+//             color: var(--yellow-theme-main-color);
+//             margin: 0px;
+//             position: relative;
+//             overflow: hidden;
+//             white-space: nowrap;
+//         //  animation: typing 0.8s steps(28, end), blink-caret 0.75s step-end infinite;
+//         }
+//         h1{
+//             font-weight: 300;
+//             line-height: 5rem;
+//             font-size: 4rem;
+//         }
+//         h3{
+//             font-weight: 100;
+//             line-height: 3rem;
+//             font-size: 2rem;
+//         }
+//         .home__text-wrapper__h1{
+//             color: white;
+//        //     animation: typingEffectAnimation 2.5s steps(30,end);
+//         }
+//     }
+
+//     &__contact-me{
+//         display: flex;
+//         justify-content: center;
+//         margin-top: 15px;
+//         cursor: pointer;
+//         background: transparent;
+//         color: var(--yellow-theme-main-color);
+
+
+//         button{
+//             cursor: pointer;
+//             margin: 10px;
+//             padding: 5px 30px;
+//             font-size: 2rem;
+//             background: transparent;
+//             color: var(--yellow-theme-main-color);
+//             border: 1.5px solid var(--yellow-theme-main-color);
+//             border-radius: 4px;
+//             font-weight: 500;
+
+//             &:hover{
+//                 background-color: var(--yellow-theme-main-color);
+//                 color: black;
+//             }
+//         }
+//     }
+
+//     &__icon{
+//         display: flex;
+//         justify-content: center;
+//         margin: 10px;
+//         cursor: pointer;
+//         background: transparent;
+//         transition: color 0.3s, font-size 0.3s;
+//         //align-items: center; /* Align icons vertically if needed */
+
+//         .home__icon:hover {
+//             color: red; 
+//             font-size: 50px; 
+//           }
+//       }
+      
+//       .home__icon > * {
+//         margin-right: 10px; /* Add 10px margin to all child elements except the last one */
+//       }
+      
+//       .home__icon > *:last-child {
+//         margin-right: 0; /* Remove margin from the last child to avoid extra spacing */
+//       }
+// }
+
+// @media only screen and (max-width:550px)
+// {
+//  .home__text-wrapper h1{
+//     font-size:3rem;
+//     line-height: 5rem;
+//  }
+// }
+// @media only screen and (min-width:550px) and (max-width:768px)
+// {
+//     .home__text-wrapper h1{
+//         font-size:4rem;
+//         line-height: 6rem;
+//      }
+// }
+// @media only screen and (min-width:769px) and (max-width:990px)
+// {
+//     .home__text-wrapper h1{
+//         font-size:6rem;
+//         line-height: 8rem;
+//      }
+// }
+
+// // keyframes 
+// // @keyframes typingEffectAnimation {
+// //     from{
+// //         width: 0;
+// //     }
+// //     to{
+// //         width: 100%;
+// //     }
+// // }
+
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Two columns - one for left content, one for image
+    gap: 40px;
+    margin: auto;
+  }
+  
+  .home {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center; // Vertically center content
+    flex-direction: column; // Stack content vertically
+  
+    &__text-wrapper {
+      text-align: center; // Center text content
+  
+      h1,
+      h3 {
+        color: var(--yellow-theme-main-color);
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+  
+      h1 {
+        font-weight: 300;
+        line-height: 5rem;
+        font-size: 4rem;
+      }
+  
+      h3 {
+        font-weight: 100;
+        line-height: 3rem;
+        font-size: 2rem;
+      }
+  
+      .home__text-wrapper__h1 {
+        color: white;
+      }
+    }
+  
+    &__contact-me {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      cursor: pointer;
+      background: transparent;
+      color: var(--yellow-theme-main-color);
+  
+      button {
+        cursor: pointer;
+        margin: 10px;
+        padding: 5px 30px;
+        font-size: 2rem;
+        background: transparent;
+        color: var(--yellow-theme-main-color);
+        border: 1.5px solid var(--yellow-theme-main-color);
+        border-radius: 4px;
+        font-weight: 500;
+  
+        &:hover {
+          background-color: var(--yellow-theme-main-color);
+          color: black;
+        }
+      }
+    }
+  
+    .home__icon {
+        display: flex;
+        justify-content: center;
+        margin: 10px; // Add margin to the entire icon container
+        cursor: pointer;
+        background: transparent;
+        transition: color 0.3s, font-size 0.3s;
+      
+        .home__icon:hover {
+          color: red;
+          font-size: 50px;
+        }
+      
+        > * {
+          margin-right: 10px; // Add margin between icons
+        }
+      
+        > *:last-child {
+          margin-right: 0;
+        }
+      }
+      
+  }
+  
+  .main__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .main__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      max-width: 100%; 
+      height: auto; // Maintain aspect ratio
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .home__text-wrapper h1 {
+      font-size: 3rem;
+      line-height: 5rem;
+    }
+  }
+  
+  @media only screen and (min-width: 550px) and (max-width: 768px) {
+    .home__text-wrapper h1 {
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 990px) {
+    .home__text-wrapper h1 {
+      font-size: 6rem;
+      line-height: 8rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .main {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+      gap: 20px; /* Reduce the gap between sections */
+    }
+    
+    .main__left,
+    .main__right {
+      text-align: center; /* Center align text */
+    }
+    
+    .main__left {
+      order: 2; /* Swap the order of the left and right sections */
+    }
+  }

@@ -1,0 +1,28 @@
+
+.footer {
+  background-color: #e5e881;
+  color: rgb(8, 8, 8); 
+}
+
+.footer__content {
+  padding: 20px 0; 
+  text-align: center;
+  line-height: 5;
+  font-weight: 50;
+  line-height: 1rem;
+  font-size: 1.5rem;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
